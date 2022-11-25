@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main{
+    width: 100%;
+    height: 4000px;
+    background-color: rgb(70, 255, 246);
+
+   
+}
+body{
+    counter-reset: h3;
+    counter-reset: h4;
+    
+
+
+}
+.main h3{
+    counter-increment: h3;
+}
+
+.main h3::before{
+    content: "Section" Counter(h3)"";
+}
+h4{
+   
+    margin-top:20px;
+}
+h5{
+   
+    margin-top:20px;
+}
+
+.main h4{
+    counter-increment: h4;
+}
+
+.main h4::before{
+    content: "1." Counter(h4)"";
+}
+
+
+.main h5{
+    counter-increment: h5;
+}
+
+.main h5::before{
+    content: "2." Counter(h5)"";
+}
+
+.hover{
+    width: 50%;
+    height: 200px;
+    background-color: aliceblue;
+    margin: 50px auto;
+   transition:2s 2s ease all;
+
+}
+.hover:hover{
+    margin-right:20px;
+    background-color: red;
+    transition: 2s;
+}
+
+.animation{
+    width: 1200px;
+    height: 400px;
+    background-color:rgb(246, 161, 3);
+    margin: 50px auto;
+    text-align: center;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name:changeBackground2 ;
+    animation-duration: 4s;
+    color: black;
+    padding: 50px;
+
+
+}
+@keyframes changeBackground{
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: blue;
+    }
+}
+@keyframes changeBackground2 {
+    0%{
+        background-color:green;
+        font-size: small;
+    }
+
+    50%{
+        background-color:rgb(213, 232, 9);
+        font-size: x-large;
+    }
+
+    100%{
+        background-color:rgb(119, 0, 128);
+        font-size: x-large;
+    }
+}
+
+.home{
+    width: 500px;
+    height:200px;
+    background-color:black;
+    margin:auto ;
+}
